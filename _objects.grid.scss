@@ -34,6 +34,14 @@ $grid-gutter    : $columns-gutter !default;
     @include margin-lr(-($grid-gutter),-($grid-gutter));
 }
 
+.o-grid--gutter-sm {
+    @include margin-lr(-($grid-gutter/2),-($grid-gutter/2));
+}
+
+.o-grid--gutter-lg {
+    @include margin-lr(-($grid-gutter*2),-($grid-gutter*2));
+}
+
     // Grid item, takes the full width by default
 
     .o-grid__item {
@@ -42,5 +50,13 @@ $grid-gutter    : $columns-gutter !default;
 
         .o-grid--gutter > & {
             @include padding-lr($grid-gutter,$grid-gutter);
+        }
+
+        .o-grid--gutter-sm > & {
+            @include padding-lr($grid-gutter/2,$grid-gutter/2);
+        }
+
+        .o-grid--gutter-lg > & {
+            @include padding-lr($grid-gutter*2,$grid-gutter*2);
         }
     }
